@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Under Maintenance | Gaurav Singh</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            font-weight: 700;
+        }
+        .clock {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body class="d-flex align-items-center justify-content-center text-center" style="height: 100vh;">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="display-4">🚧 We'll Be Back Soon</h1>
+                <p class="lead mt-3">
+                    Sorry for the inconvenience. We're performing some maintenance at the moment.
+                </p>
+                <p>— Gaurav Singh</p>
+                <div class="clock mt-4">
+                    <h5>Current Time: <span id="clock"></span></h5>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-danger m-1" onclick="window.open('tel:+916387454414', '_blank')"><i class="fa fa-phone"></i> Let's connect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JS for Bootstrap and Clock -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = time;
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+    </script>
+</body>
+
+</html>
